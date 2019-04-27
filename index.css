@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 0;
+    width: 100%;
+    text-align: center;
+}
+main {
+    background: rgb(245, 156, 156);
+    width: 90%;
+    height: 900px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 2rem 0;
+    
+}
+.input_field {
+  
+    left:0;
+    width: 200px;
+    margin: 0;
+}
+.row {
+    width: 800px; 
+    margin: 30px auto ;
+}
+.row2 {
+    width: 1000px; 
+    margin: 10px auto ;
+}
+.image-block {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;  
+    width: 100px;
+    height: 100px;
+    background-color: white;   
+    margin: 2px;
+    border-radius: 12px;
+}
+.image-enemy {
+    position: relative;
+    top:10px;
+    overflow: hidden;  
+    width: 50px;
+    height: 50px;
+    background-color: white;   
+    margin: auto;
+    border-radius: 12px;
+}
+.picture {
+    position:absolute;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;
+    margin:auto;      
+}
+
+.pic_1{
+    height: 80px;  
+}
+.pic_2{
+    height: 110px; 
+     
+}
+.pic_3{
+    height: 70px;  
+}
+.pic_4{
+    height: 100px;  
+}
+.pic-5{
+    height: 50px;
+}
+.image-block-enemy {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    top: 30px;
+    margin: auto;
+    width: 400px;
+    height: 150px;
+    background-color: white;  
+    border-radius: 12px;
+     
+}
+
+.text_finish {
+    position: relative;
+    display: inline-block;
+    top:-10px;
+
+}
+.display_stats {  
+  margin-top:50px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  
+}
+.text-block {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    
+    width: 200px;
+    height: 30px;
+    background-color: white;   
+    margin: 2px;
+    border-radius: 12px;
+}
