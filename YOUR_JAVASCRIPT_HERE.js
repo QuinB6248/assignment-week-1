@@ -26,7 +26,6 @@ const enemy = {
         type: "",
         damage: 2
     }
-
 }
 
 // change the name of HERO into submitted name, store that name in object hero
