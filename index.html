@@ -11,7 +11,15 @@
   <!-- 👍 YOUR HTML HERE 👍 -->
   
     <main>
-      <header><span id="change_name">A HERO</span> ON AN ADVENTURE!</header>
+      <div class="input_field">
+        <form onsubmit="submitName(); return false">
+          <label for="hero_name">please enter your name here:</label>
+          <input type="text" name="hero_name" id="hero_name" value="">
+          <button>SUBMIT</button>
+        </form>
+      </div>
+      
+      <h3><span id="change_name">A HERO</span> ON AN ADVENTURE!</h3>
       <div class="image-block">
           <img class="picture pic_1" id='inn' onclick="rest(hero)" src="img/heart.png" alt="health">
       </div>

@@ -1,8 +1,14 @@
 // Write your JS here
 
-const heroName = prompt("Please enter your name", "hero");
 
-document.getElementById("change_name").textContent= heroName.toUpperCase();
+
+function submitName() {
+    const nameInput = document.getElementById("hero_name");
+    const name = nameInput.value;
+    document.getElementById("change_name").textContent = name.toUpperCase();
+    nameInput.value = null;
+}
+
 
 
 const hero = {
