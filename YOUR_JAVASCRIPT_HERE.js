@@ -1,11 +1,5 @@
 // Write your JS here
 
-
-
-
-
-
-
 const hero = {
     name: "hero",
     heroic: true,
@@ -16,6 +10,24 @@ const hero = {
         damage: 2
     }
 };
+
+const enemy = {
+    name: "enemy",
+    heroic: true,
+    inventory: [
+        { type: "fist", damage: 1,},
+        { type: "dagger", damage: 2,},
+        { type: "bow_and_arrow", damage: 3,},
+        { type: "sword", damage: 4,},
+        { type: "missed", damage: 0,},
+    ],
+    health: 10,
+    weapon: {
+        type: "",
+        damage: 2
+    }
+
+}
 
 // change the name of HERO into submitted name, store that name in object hero
 function submitName() {
@@ -43,7 +55,7 @@ function pickUpItem(hero, weapon) {
     weapon.damage = 2;
     hero.inventory.push(weapon);
     
-    displayStats (hero);
+    //displayStats (hero);
     
 
 };
@@ -57,6 +69,24 @@ function equipWeapon(hero) {
     }
     displayStats (hero);
 };
+
+
+function fightEnemy(hero, enemy) {
+    const indexNum = Math.floor(Math.random()*enemy.inventory.length);
+    enemy.weapon = enemy.inventory[indexNum];
+    hero.health -= enemy.weapon.damage;
+    if (hero.health <= 0) {
+        document.getElementById('win').innerHTML = "YOU LOST";
+    } else {
+        enemy.health -= hero.weapon.damage;
+        hero.inventory.pop();
+        console.log(hero.inventory)
+        if (enemy.health <= 0) {
+            document.getElementById('win').innerHTML = "YOU WIN";
+        }
+    }
+    displayStats (hero);
+}
 
 function displayStats (hero) {
     

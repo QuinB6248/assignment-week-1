@@ -78,10 +78,16 @@ main {
     border-radius: 12px;
      
 }
+
+.text_finish {
+    position: relative;
+    display: inline-block;
+    top:-10px;
+
+}
 .display_stats {  
   margin-top:100px;
   margin-bottom: 30px;
-  border: 6px plum;
   border-radius: 12px;
   background-color: white;
   color: black;
