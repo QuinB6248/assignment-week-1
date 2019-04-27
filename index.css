@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 0;
+    width: 100%;
+    text-align: center;
+}
+main {
+    background: rgb(245, 156, 156);
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 2rem 0;
+    
+}
+.image-block {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    top: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: white;   
+}
+.picture {
+    position:absolute;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;
+    margin:auto;      
+}
+
+.pic_1{
+    height: 100px;  
+}
+.pic_2{
+    height: 200px;     
+}
+.pic_3{
+    height: 100px;  
+}
+
+

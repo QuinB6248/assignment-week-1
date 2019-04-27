@@ -3,14 +3,31 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 
 
   <!-- 👍 YOUR HTML HERE 👍 -->
-  <img id='inn' onclick="rest(hero)" src="" alt="">
-  <img id='dagger' onclick="pickUpItem(hero, hero.weapon)" src="" alt="">
-  <img id='bag' onclick="equipWeapon(hero)" src="" alt="">
+  
+    <main>
+      <header>HERO GAME</header>
+      <div class="image-block">
+          <img class="picture pic_1" id='inn' onclick="rest(hero)" src="img/heart.png" alt="health">
+      </div>
+      <div class="image-block">
+        <img class="picture pic_2" id='dagger' onclick="pickUpItem(hero, hero.weapon)" src="img/dagger.jpg" alt="pick up weapon">
+    </div>
+    <div class="image-block">
+      <img class="picture pic_3" id='bag' onclick="equipWeapon(hero)" src="img/bag.png" alt="equip weapon">
+  </div>
+      
+      
+    </main>
+  
+
+
+
 
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
