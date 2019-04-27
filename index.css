@@ -13,7 +13,7 @@ body {
 main {
     background: rgb(245, 156, 156);
     width: 90%;
-    height: 400px;
+    height: 800px;
     margin: auto;
     border-radius: 5px;
     padding: 2rem 0;
@@ -25,15 +25,25 @@ main {
     width: 200px;
     margin: 0;
 }
+.row {
+    width: 800px; 
+    margin: 30px auto ;
+}
+.row2 {
+    width: 800px; 
+    margin: 10px auto ;
+}
 .image-block {
     position: relative;
     display: inline-block;
-    overflow: hidden;
-    top: 10px;
+    overflow: hidden;  
     width: 200px;
     height: 200px;
     background-color: white;   
+    margin: 2px;
+    border-radius: 12px;
 }
+
 .picture {
     position:absolute;
     top: 0;  
@@ -52,5 +62,41 @@ main {
 .pic_3{
     height: 100px;  
 }
+.pic_4{
+    height: 100px;  
+}
 
-
+.image-block-enemy {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    top: 30px;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-color: white;  
+    border-radius: 12px;
+     
+}
+.display_stats {  
+  margin-top:100px;
+  margin-bottom: 30px;
+  border: 6px plum;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  
+}
+.text-block {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    
+    width: 200px;
+    height: 30px;
+    background-color: white;   
+    margin: 2px;
+    border-radius: 12px;
+}
