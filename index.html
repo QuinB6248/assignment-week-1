@@ -3,14 +3,78 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 
 
   <!-- 👍 YOUR HTML HERE 👍 -->
-  <img id='inn' onclick="rest(hero)" src="" alt="">
-  <img id='dagger' onclick="pickUpItem(hero, hero.weapon)" src="" alt="">
-  <img id='bag' onclick="equipWeapon(hero)" src="" alt="">
+  
+    <main>
+      <div class="input_field">
+        <form onsubmit="submitName(); return false">
+          <label for="hero_name">please enter your name here:</label>
+          <input type="text" name="hero_name" id="hero_name" value="">
+          <button>SUBMIT</button>
+        </form>
+      </div>
+      
+      <h3><span id="change_name">A HERO</span> ON AN ADVENTURE!</h3>
+      <div class="row">
+        <div class="image-block">
+          <img class="picture pic_1" id='inn' onclick="rest(hero)" src="img/heart.png" alt="health">
+        </div>
+        <div class="image-block">
+          <img class="picture pic_2" id='dagger' onclick="pickUpItem(hero, hero.weapon)" src="img/dagger.jpg" alt="pick up weapon">
+        </div>
+        <div class="image-block">
+          <img class="picture pic_3" id='bag' onclick="equipWeapon(hero)" src="img/bag.png" alt="equip weapon">
+        </div>
+               
+      </div>
+      
+      
+      <div class="image-block-enemy">
+        <img class="picture pic_4"  onclick="fightEnemy(hero, enemy)" src="img/fight_1.png" alt="equip weapon">
+      </div>
+      <div class="text_finish">
+          <h1 id="win">fight</h1>
+      </div>
+      
+      <div class="image-enemy" id='angry_enemy'>
+        <img class="picture pic-5"  onclick="removePicture()" src="img/enemy.png" alt="equip weapon">
+      </div>
+      <div>
+        <button class="display_stats" onclick="displayStats(hero)">Display Stats</button>
+      </div>
+      <div class="row2">
+          <div class="text-block">
+              <h4>name: <span id="stats_name"></span></h4>
+            </div>
+      </div>
+      <div class="row2">
+          <div class="text-block">
+              <h4>health: <span id="stats_health"></span></h4>
+            </div>
+            <div class="text-block">
+                <h4>type of weapon: <span id="stats_type"></span></h4>
+            </div>
+            <div class="text-block">
+                <h4>damage of weapon: <span id="stats_damage"></span></h4>
+            </div>
+            <div class="text-block">
+              <h4>inventory: <span id="stats_inventory"></span></h4>
+            </div>
+      </div>
+      
+        
+    
+      
+    </main>
+  
+
+
+
 
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
