@@ -18,8 +18,8 @@ const enemy = {
         { type: "fist", damage: 1,},
         { type: "dagger", damage: 2,},
         { type: "bow_and_arrow", damage: 3,},
-        { type: "sword", damage: 4,},
-        { type: "missed", damage: 0,},
+        { type: "sword", damage: 3,},
+        { type: "knife", damage: 1,}     
     ],
     health: 10,
     weapon: {
@@ -45,54 +45,60 @@ function rest(object) {
     } else {
         object.health = 10
     };
-    displayStats (hero);
+    displayStats(hero);
      return object
 };
 
 // change weapon type to dagger and damage to 2, push this object in invemntory array of hero object
-function pickUpItem(hero, weapon) {
-    weapon.type = "dagger";
-    weapon.damage = 2;
-    hero.inventory.push(weapon);
+function pickUpItem(heroObj, weaponObj) {
+    weaponObj.type = "dagger";
+    weaponObj.damage = 2;
+    heroObj.inventory.push(weaponObj);
     
-    //displayStats (hero);
-    
-
+    displayStats(hero);   
 };
 
 // weapon becomes the first item of the inventory array of hero object
-function equipWeapon(hero) {
-    if (hero.inventory.length === 0) {
+function equipWeapon(heroObj) {
+    if (heroObj.inventory.length === 0) {
         return
     } else {
-        hero.weapon = hero.inventory[0];
+        heroObj.weapon = heroObj.inventory[0];
     }
-    displayStats (hero);
+    displayStats(hero);
 };
 
-
-function fightEnemy(hero, enemy) {
-    const indexNum = Math.floor(Math.random()*enemy.inventory.length);
-    enemy.weapon = enemy.inventory[indexNum];
-    hero.health -= enemy.weapon.damage;
-    if (hero.health <= 0) {
-        document.getElementById('win').innerHTML = "YOU LOST";
+// Get damage from a random weapon+damage from enemy object, and damage enemy if health = 0 then someone wins
+function fightEnemy(heroObj, enemyObj) {
+    if (heroObj.health <= 0 || enemyObj.health <= 0) {
+        return   
+   }
+    const indexNum = Math.floor(Math.random() * enemyObj.inventory.length);
+    enemyObj.weapon = enemyObj.inventory[indexNum];
+    heroObj.health -= enemyObj.weapon.damage;
+    if (heroObj.health <= 0) {
+         document.getElementById('win').innerHTML = "YOU LOST";    
     } else {
-        enemy.health -= hero.weapon.damage;
-        hero.inventory.pop();
-        console.log(hero.inventory)
-        if (enemy.health <= 0) {
-            document.getElementById('win').innerHTML = "YOU WIN";
+        enemyObj.health -= heroObj.weapon.damage;
+        heroObj.inventory.pop();  
+        if (enemyObj.health <= 0) {
+          document.getElementById('win').innerHTML = "YOU WIN";     
         }
     }
-    displayStats (hero);
+    displayStats(hero);
 }
 
-function displayStats (hero) {
-    
-    document.getElementById("stats_name").textContent = hero.name;
-    document.getElementById("stats_health").textContent = hero.health;
-    document.getElementById("stats_type").textContent = hero.weapon.type;
-    document.getElementById("stats_damage").textContent = hero.weapon.damage;
+// Removes picture of enemy
+function removePicture() {
+    const image = document.getElementById("angry_enemy");
+    image.parentNode.removeChild(image);
+}
 
+// Show status of hero
+function displayStats(heroObj) {
+    document.getElementById("stats_name").textContent = heroObj.name;
+    document.getElementById("stats_health").textContent = heroObj.health;
+    document.getElementById("stats_type").textContent = heroObj.weapon.type;
+    document.getElementById("stats_damage").textContent = heroObj.weapon.damage;
+    document.getElementById("stats_inventory").textContent = heroObj.inventory.length;
 }

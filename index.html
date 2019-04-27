@@ -41,7 +41,9 @@
           <h1 id="win">fight</h1>
       </div>
       
-      
+      <div class="image-enemy" id='angry_enemy'>
+        <img class="picture pic-5"  onclick="removePicture()" src="img/enemy.png" alt="equip weapon">
+      </div>
       <div>
         <button class="display_stats" onclick="displayStats(hero)">Display Stats</button>
       </div>
@@ -60,7 +62,13 @@
             <div class="text-block">
                 <h4>damage of weapon: <span id="stats_damage"></span></h4>
             </div>
+            <div class="text-block">
+              <h4>inventory: <span id="stats_inventory"></span></h4>
+            </div>
       </div>
+      
+        
+    
       
     </main>
   
