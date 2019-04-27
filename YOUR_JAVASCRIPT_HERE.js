@@ -1,4 +1,10 @@
 // Write your JS here
+
+const heroName = prompt("Please enter your name", "hero");
+
+document.getElementById("change_name").textContent= heroName.toUpperCase();
+
+
 const hero = {
     name: "",
     heroic: true,
